@@ -1,0 +1,249 @@
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  /*background: red;*/
+  color: red;
+  text-align: center;
+}
+
+#c1 {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+}
+
+#c2 {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 490px;
+    z-index: 1;
+}
+
+#c3 {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    top: -28px;
+    left: 232px;
+    z-index: 1;
+}
+#c4 {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 479px;
+    left: 232px;
+    z-index: 1;
+}
+#c5 {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 479px;
+    left:-10px;
+    z-index: 1;
+}
+#c6 {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 479px;
+    left:479px;
+    z-index: 1;
+}
+
+
+.row {
+  width: 528px;
+  height: 176px;
+  margin: 0 auto;
+  /*clear: both;*/
+
+}
+
+.cell {
+  width: 160px;
+  height: 160px;
+  /*margin: 5px;*/
+  border-radius: 2px;
+  background: blue;
+  border: 3px solid #e0d9d2;
+  float: left;
+
+  text-align: center;
+  line-height: 160px;
+  color: #6c6c6c;
+  font-size: 100px;
+}
+
+.cell:hover {
+  border: 3px solid #ccc0b3;
+}
+#btn1{
+  color:white;
+  background: purple;
+  transition: 0.2s;
+  /*padding:;*/
+}
+
+body{
+  margin: 150px 300px;
+  background: purple;
+  float:right;
+}
+
+.gameboard {
+  border: 5px solid #000;
+  width: 500px;
+  height: 500px;
+  position:relative;
+
+}
+
+#hr1 {
+  border-top: 5px solid red;
+  height: 65px;
+  width:142%;
+  margin: 240px 0 0 -130px;
+  position: absolute;
+
+
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#hr2 {
+  border-top: 5px solid red;
+  height:425px;
+  width:143%;
+  margin: 190px 0 0 42px;
+  position:relative;
+
+
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#hr3 {
+  display-inline:block;
+  border-top: 5px solid red;
+  height:00px;
+  width:500px;
+  margin: -365px 0 0 0px;
+  position:absolute;
+
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(180deg);
+}
+#hr4 {
+  display-inline:block;
+  border-top: 5px solid red;
+  height:00px;
+  width:505px;
+  margin: -375px 0 0 0px;
+  position:absolute;
+
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.square{
+  width:80px;
+  height:80px;
+}
+
+
+
+
+/*#gameBoard{
+  display: inline-block
+  height:700px;
+  width:700px;
+  border: black solid 2px;
+  margin: auto;
+}
+
+#l1{
+  display: inline-block;
+height:700px;
+width:10px;
+border:solid black 2px;
+margin:auto;
+}
+#l2{
+  display: inline-block;
+  height:10px;
+  width: 700px;
+border:solid black 2px;
+margin:auto;
+    position: relative;
+    top: -362px;
+
+}*//*
+#l3{
+  position: relative;*/
+  /*z-index: 1;
+
+  display: inline-block;
+  height:10px;
+  width: 1000px;
+border:solid black 2px;
+margin:auto;
+transform: rotate(-47deg);
+transform-origin: 3% 1%;*//*
+}
+#l4{
+display: inline-block;
+  height:12px;
+  width: 698px;
+border:solid black 2px;
+margin:auto;
+transform: rotate(50deg);
+transform-origin: 98% 11%;
+
+top: 403px;
+    right: 145px;
+}*/
+/*for the diagonal line*/
+/*div{border:1px solid gray;
+width:300px;
+height:200px;
+position:relative;}
+*/
+
+
+/*div:after{
+content:"";
+position:absolute;
+border-top:1px solid red;
+
+  width:360px;
+  transform: rotate(33.5deg);
+  transform-origin: 0% 0%;
+}
+*/
