@@ -1,5 +1,5 @@
 
-![myframework](https://github.com/arifkhan36/ga-project-1/image2.jpg)
+![myframework](https://github.com/arifkhan36/ga-project-1/blob/master/image2.jpg)
 
 About:
 
