@@ -1,3 +1,6 @@
+
+![myframework](https://github.com/arifkhan36/ga-project-1/image2.jpg)
+
 About:
 
 Three Men's Morris, closely related to the board games Morabaraba,Tic Tac Toe, Six Men's Morris, Nine Men's Morris, and Twelve Men's Morris, is an abstract strategy game that dates back to before 1400 BC.
