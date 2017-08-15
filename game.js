@@ -7,91 +7,97 @@ $(document).ready(function(){
 
 });
 
-
 class Field{
-  constructor(id, neighborsIds, content){ //naighbors are array of field Ids
+  constructor(id, content){ //naighbors are array of field IDs Ids
     this.id=id;
-    this.neighborsIds=neighborsIds;
     this.content = content;
-
   }
-   isEmpty(){
-    if(this.content === "nothing"){
-      return true;
-    }else{
-       return false;
-    }
+}
 
-
-  }
-  whatsOnMe(){
-    //returns stone or "empty";
-   }
-
-  }
-  class Stone{
-    constructor(color){
-      if (color="white" || color="black"){
-      this.color=color;
-
-
-
-      }
-    set(position){
-      position.content=this;
-    }
-    isMovable(){
-  if(this===field5){return true;}
-   else
-  return(this.position.neighborsIds[0]==="nothing"||this.position.naighborsIds[1]==="nothing"||this.position.naighborsIds[2]==="nothing")
- }
- }
-
-
+class Stone{
+  constructor(color, grabed, position){
+   this.color=color;
+   this.grabed=grabed;
+   this.position=position;
   }
 
-  class Player{
-    constructor(name){
+}
+
+class Player{
+    constructor(name, color){
       this.name=name;
+      this.color=color;
+}
+
+set(stone,newPosition){ //position is a field
+    if((stone.grabed) && (newPosition.content==="nothing")){
+    newPosition.content=stone; //the field is not empty any more
+    stone.grabed=false; //the stone is not grabed any more
+
     }
-  set(stone,field){
-    field.content=stone}
-  grab(){}
 
+}
+grab(stone){//when player clicks on ston it is "grabed" (true)
+  if (stone.color===this.color){
+  stone.position.content="nothing"; //no more stone on the field from stone was taken
+  stone.grabed=true; //stage of stone has been changed now
   }
+  }
+}
+//game is doing nothing, there are just properties
+class Game{
+  constructor(player1,player2,onTurn,winner,grabedStone){
+    this.player1=player1;
+    this.player2=player2;
+    this.onTurn=onTurn
+    this.winner=winner;
+    this.grabedStone=grabedStone;
+     }
+}
+ //creating empty fields
+  let field1 = new Field(1, "nothing");
+  let field5= new Field (2, "nothing");
+  let field2 = new Field(3, "nothing");
+  let field3 = new Field(4, "nothing");
+  let field4 = new Field(5, "nothing");
+  let field6 = new Field(6, "nothing");
+  let field7 = new Field(7, "nothing");
+  let field8 = new Field(8, "nothing");
+  let field9 = new Field(9, "nothing");
 
 
+ //creting stones
 
-  let field1=new Field("1",["2","4","5"],"nothing");
-  let field5= new Field ("5", ["1","2","3","4","6","7","8","9"],"nothing");
-  let field2 = new Field("2",["1","3","5"],"nothing");
-  let field3 = new Field("3",["2","5","6"],"nothing");
-  let field4 = new Field("4",["1","5","7"],"nothing");
-  let field6 = new Field("6",["3","5","9"],"nothing");
-  let field7 = new Field("7",["4","5","8"],"nothing");
-  let field8 = new Field("8",["5","7","9"],"nothing");
-  let field9 = new Field("9",["5","6","8"],"nothing");
+ let white1=new Stone ("white", false, field1); //as you se the stones are initialy palced at desigented fields
+ let white2 = new Stone("white", false, field2);
+ let white3 = new Stone("white",false, field3);
+ let black1= new Stone("black", false, field7);
+ let black2 = new Stone("black",false, field8);
+ let black3 = new Stone("black",false, field9);
+
+ //now you got stones, so you can class them on fields
+
+  field1 = new Field(1, white1);
+  field2= new Field (2, white2);
+  field3 = new Field(3, white3);
+
+  field7 = new Field(7, black1);
+  field8= new Field (8, black2);
+  field9 = new Field(9, black3);
+
+  //create players
+
+let player1 = new Player("Charlie", "white");
+let player2 = new Player("Oliver", "black");
+//players now can move the stones but only to empty fields
+//there is not movable() so they can move to non-naighboring fields
+//you can fix that later
+//creating Game
+game= new Game(player1,player2,player1,null,null);
 
 
- let  white1=new Stone("white");
- let white2 = new Stone ("white");
- let white3 = new Stone ("white");
- let black1= new Stone("black");
- let black2 = new Stone ("black");
- let black3 = new Stone ("black3");
-
-
- let player1 = new Player("Charlie");
-  let player2 = new Player("Oliver");
-
-
-player1.set(white1,field1);
-player1.set(white2,field2);
-player1.set(white3,field3);
-player2.set(black1,field7);
-player2.set(black2,field8);
-player2.set(black3,field9);
-
+game.player1.grab(white1); //for testinggame.player1.set(white1, field5);
+//for testing
 
 const game = {
     inprogress: true,
